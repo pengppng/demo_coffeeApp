@@ -27,6 +27,10 @@ class MyBtmNav extends StatelessWidget {
           icon: Icons.shopping_bag_outlined,
           text: 'Cart',
         ),
+        // GButton(
+        //   icon: Icons.run,
+        //   text: 'Healthy',
+        // ),
       ],
       ),
     );

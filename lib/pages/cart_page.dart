@@ -16,20 +16,15 @@ class _CartPageState extends State<CartPage> {
   void payNow(){   //pay button taped
   showDialog(
       context: context, 
-      builder: (context) => AlertDialog(
+      builder: (context) => const AlertDialog(
         title: Text("Order Completed"),//popup
       ));
   }
 // remove item from cart
   void removeFromCart(Coffee coffee){
     Provider.of<CoffeeShop>(context,listen: false).removeItemToCart(coffee);
-    //provider asset to coffeeshop
-
-  
-    
+    //provider asset to coffeeshop 
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Consumer<CoffeeShop>(builder:(context, value, child) => SafeArea(
@@ -47,10 +42,9 @@ class _CartPageState extends State<CartPage> {
                 Coffee eachCoffee = value.userCart[index];
                 // return coffee tile
                 return CoffeeTile(
-                  coffee: eachCoffee, 
-                  onPressed: () => removeFromCart(eachCoffee), 
-                  icon: Icons.delete, //icon delete don't show
-                  //icon:Icons(Icons.delete),
+                  icon: Icons.delete,
+                  coffee: eachCoffee,
+                  onPressed: () => removeFromCart(eachCoffee),
                 );
               }),
               ),
@@ -70,7 +64,7 @@ class _CartPageState extends State<CartPage> {
                   //icon:Icons.payment 
                 ),
               ),
-              
+            
     ],
     ),
       ), 

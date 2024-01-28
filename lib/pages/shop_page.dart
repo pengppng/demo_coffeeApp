@@ -58,7 +58,8 @@ class _ShopPageState extends State<ShopPage> {
                         icon: Icons.add,
                         coffee: eachCoffee,
                         onPressed: () => addToCart(eachCoffee),
-                      ); //ListTile(title: Text(eachCoffee.name),
+                      );
+                       //ListTile(title: Text(eachCoffee.name),
                     }),
               ),
             ],
