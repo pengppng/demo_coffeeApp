@@ -14,6 +14,7 @@ class _HomepageState extends State<Homepage> {
 
   //navigate bottom bar
   int _selectedIndex = 0 ;
+  // ignore: non_constant_identifier_names
   void NavigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;
